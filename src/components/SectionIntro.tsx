@@ -47,7 +47,7 @@ export default function SectionIntro({
       <p className="mb-8 max-w-md text-base text-gray-500">{description}</p>
       <button
         onClick={onContinue}
-        className="rounded-xl bg-navy-900 px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-navy-800"
+        className="rounded-xl bg-harbr-blue px-8 py-3 text-base font-semibold text-white shadow-lg shadow-harbr-blue/20 transition-all hover:bg-blue-700"
       >
         Continue
       </button>

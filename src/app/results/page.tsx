@@ -36,13 +36,13 @@ function ResultsContent() {
   return (
     <div className="flex min-h-screen flex-col bg-navy-50/50">
       <header className="w-full border-b border-gray-100 bg-white no-print">
-        <div className="mx-auto flex h-16 max-w-4xl items-center px-6">
+        <div className="mx-auto flex h-20 max-w-4xl items-center justify-center px-6">
           <Image
             src="/harbr-logo.png"
             alt="Harbr Data"
-            width={140}
-            height={32}
-            className="h-8 w-auto"
+            width={220}
+            height={50}
+            className="h-12 w-auto"
             priority
           />
         </div>
@@ -70,8 +70,8 @@ function ResultsContent() {
 
         {/* Primary Finding */}
         <section className="mb-8">
-          <div className="rounded-2xl border border-navy-200 bg-white p-8">
-            <div className="mb-1 text-sm font-semibold uppercase tracking-wider text-navy-500">
+          <div className="rounded-2xl border-l-4 border-l-harbr-blue border border-gray-100 bg-white p-8 shadow-sm">
+            <div className="mb-1 text-sm font-bold uppercase tracking-wider text-harbr-blue">
               Primary area of exposure
             </div>
             <h2 className="mb-4 text-2xl font-bold text-navy-900">
@@ -85,9 +85,9 @@ function ResultsContent() {
 
         {/* Regulatory Context */}
         <section className="mb-8">
-          <div className="rounded-2xl bg-white p-8 border border-gray-200">
-            <h3 className="mb-3 text-lg font-bold text-navy-900">Regulatory context</h3>
-            <p className="text-sm leading-relaxed text-gray-600">
+          <div className="rounded-2xl bg-navy-900 p-8">
+            <h3 className="mb-3 text-lg font-bold text-white">Regulatory context</h3>
+            <p className="text-sm leading-relaxed text-navy-200">
               The Data (Use and Access) Act 2025 requires regulated utilities to provide structured access to consumer and operational data. As Smart Data schemes are established, the volume, variety, and velocity of external data sharing obligations will increase. Organisations that rely on fragmented, manual processes face growing compliance and operational risk that compounds with each new counterparty, dataset, and regulatory requirement.
             </p>
           </div>
@@ -99,15 +99,15 @@ function ResultsContent() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-gray-200 py-6 text-center">
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
+        <footer className="border-t border-gray-200 py-8 text-center">
+          <div className="flex items-center justify-center gap-3 text-sm text-gray-400">
             <span>Powered by</span>
             <Image
               src="/harbr-logo.png"
               alt="Harbr Data"
-              width={80}
-              height={20}
-              className="h-4 w-auto opacity-50"
+              width={120}
+              height={28}
+              className="h-6 w-auto opacity-60"
             />
           </div>
         </footer>

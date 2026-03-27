@@ -28,13 +28,13 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <header className="w-full border-b border-gray-100">
-        <div className="mx-auto flex h-16 max-w-4xl items-center px-6">
+        <div className="mx-auto flex h-20 max-w-4xl items-center justify-center px-6">
           <Image
             src="/harbr-logo.png"
             alt="Harbr Data"
-            width={140}
-            height={32}
-            className="h-8 w-auto"
+            width={220}
+            height={50}
+            className="h-12 w-auto"
             priority
           />
         </div>
@@ -108,7 +108,7 @@ export default function Home() {
 
             <button
               type="submit"
-              className="w-full rounded-xl bg-navy-900 py-4 text-base font-semibold text-white transition-colors hover:bg-navy-800"
+              className="w-full rounded-xl bg-harbr-blue py-4 text-base font-semibold text-white shadow-lg shadow-harbr-blue/20 transition-all hover:bg-blue-700 hover:shadow-xl"
             >
               Start Assessment
             </button>

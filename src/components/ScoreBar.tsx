@@ -1,13 +1,18 @@
 'use client'
 
 import { ScoreBand } from '@/types'
-import { bandColors } from '@/lib/scoring'
 import { useEffect, useState } from 'react'
 
 interface ScoreBarProps {
   score: number
   maxScore: number
   band: ScoreBand
+}
+
+const barColorMap: Record<ScoreBand, string> = {
+  controlled: '#059669',
+  at_risk: '#D97706',
+  fragmented_exposed: '#DC2626',
 }
 
 export default function ScoreBar({ score, maxScore, band }: ScoreBarProps) {
@@ -22,8 +27,8 @@ export default function ScoreBar({ score, maxScore, band }: ScoreBarProps) {
   return (
     <div className="h-3 w-full overflow-hidden rounded-full bg-gray-100">
       <div
-        className={`h-full rounded-full transition-score-bar ${bandColors[band].bar}`}
-        style={{ width: `${width}%` }}
+        className="h-full rounded-full transition-score-bar"
+        style={{ width: `${width}%`, backgroundColor: barColorMap[band] }}
       />
     </div>
   )
