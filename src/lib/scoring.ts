@@ -3,14 +3,14 @@ import { AssessmentState, OverallResult, Pillar, PillarResult, ScoreBand } from 
 
 function getPillarBand(score: number, maxScore: number): ScoreBand {
   const percentage = score / maxScore
-  if (percentage <= 0.4) return 'controlled'
-  if (percentage <= 0.7) return 'at_risk'
+  if (percentage >= 0.7) return 'controlled'
+  if (percentage >= 0.4) return 'at_risk'
   return 'fragmented_exposed'
 }
 
 function getOverallBand(totalScore: number): ScoreBand {
-  if (totalScore <= 10) return 'controlled'
-  if (totalScore <= 18) return 'at_risk'
+  if (totalScore >= 19) return 'controlled'
+  if (totalScore >= 11) return 'at_risk'
   return 'fragmented_exposed'
 }
 
@@ -43,7 +43,7 @@ export function calculateResults(answers: Record<string, number>): OverallResult
   const maxScore = pillars.reduce((sum, p) => sum + p.maxScore, 0)
 
   const weakestPillar = pillars.reduce((worst, p) =>
-    p.percentage > worst.percentage ? p : worst
+    p.percentage < worst.percentage ? p : worst
   ).pillar
 
   return {

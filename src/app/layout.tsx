@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'External Data Sharing Risk Scan | Harbr Data',
+  title: 'External Data Sharing Health Check | Harbr Data',
   description: 'A focused diagnostic for UK regulated utilities. Assess how your organisation manages the complexity, operational load, and governance of external data sharing.',
 }
 

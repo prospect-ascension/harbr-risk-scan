@@ -46,7 +46,7 @@ export default function Home() {
             Diagnostic Tool
           </div>
           <h1 className="mb-4 text-4xl font-bold leading-tight text-navy-900 sm:text-5xl">
-            External Data Sharing Risk Scan
+            External Data Sharing Health Check
           </h1>
           <p className="mb-2 text-lg text-gray-500">
             A focused diagnostic for UK regulated utilities. Assess how your organisation manages the complexity, operational load, and governance of external data sharing.
